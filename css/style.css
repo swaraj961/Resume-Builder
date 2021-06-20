@@ -39,3 +39,20 @@ label{
     margin-bottom: .3rem;
     font-size: 1.6rem;
 }
+
+/* #cv-form{
+    display: none;
+} */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: yellow;
+}
+.background-left{
+    background-color: #EE5253;
+}
+

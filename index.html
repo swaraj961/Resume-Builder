@@ -15,7 +15,7 @@
 
 
     
-   <div class="container">
+   <div class="container" id="cv-form">
     <h1 class="text-center my-2">Resume-Builder</h1>
     <p class="text-center">Create your own resume instantly ✨ </p>
 
@@ -125,7 +125,7 @@
         </div>
         
         <div class="container text-center mt-3 my-4">
-            <btn-primary class="btn btn-success btn-lg ">Generate your CV</btn-primary>
+            <btn-primary class="btn btn-success btn-lg" onclick="GenerateCV()">Generate your CV</btn-primary>
 
         </div>
 
@@ -134,7 +134,88 @@
     </div>
 
    </div>
+  
+   <div class="container" id="cv-template">
+
+    <!-- grid 12 =>  4:8 -->
+    <div class="row">
+
+     <div class="col-md-4 text-center py-5 background-left">
+        <!-- first col -->
+        <img src="./images/defaultAvatar.png" class="img-fluid defaultAvatar" alt="userAvatar" srcset="">
+
+        <div class="container mt-3">
+
+            <h4 id="nameT">Your Name</h4>
+            <p id="mobileT">+91 12456799</p>
+            <p id="emailT" style="font-size: small;">yourname@ymail.com</p>
+            <p id="addressT">House no E-84/3 3rd Floor Rk Puram</p>
+
+            <hr>
+
+            <p id="linkIdT"><a href="#">Linkedin</a></p>
+            <p id="gitIdT"><a href="#">Github</a></p>
+            <p id="portIdT"><a href="#">Portfolio</a></p>
+        </div>
+
+    </div> 
     
+    <div class="col-md-8">
+        <!-- second col -->
+
+        <!-- job title -->
+        <h1 id="JobNameT" class="text-center py-4" style="font-weight: 800;">Job tittle </h1>
+
+        <!-- Work exp card -->
+
+        <div class="card mt-3">
+
+            <div class="card-header background-left">
+            <h3>Work Experience</h3>
+            </div>
+            <div class="card-body "style="color: black">
+               <ul id="weT">
+
+                <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
+                <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
+                
+               </ul>
+            </div>
+        </div>
+        
+        <!-- Education card -->
+
+        <div class="card mt-4">
+
+            <div class="card-header background-left">
+            <h3>Education Qualification</h3>
+            </div>
+            <div class="card-body "style="color: black">
+
+                <ulid id="edT">
+
+                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
+                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
+                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
+                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mt-4 text-center">
+            <button class="btn btn-success" onclick="PrintCV()">Print CV </button>
+        </div>  
+    </div>
+
+    
+
+
+    </div>
+
+
+   </div>
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="./js/app.js"></script>
