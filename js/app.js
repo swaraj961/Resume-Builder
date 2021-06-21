@@ -12,7 +12,7 @@ AddworkExpBtn.addEventListener("click", () => {
     workfeid.classList.add('form-control');
     workfeid.classList.add('weField');
     workfeid.classList.add('mt-3');
-    workfeid.setAttribute("rows", 6);
+    workfeid.setAttribute("rows", 3);
     workfeid.setAttribute("placeholder", "Enter here");
 
 
@@ -43,10 +43,11 @@ eduBtn.addEventListener("click", () => {
     ed.classList.add("form-control");
     ed.classList.add("EduField");
     ed.classList.add('mt-3');
-    ed.setAttribute("rows", 6);
+    ed.setAttribute("rows", 3);
     ed.setAttribute("placeholder", "Enter here");
 
     education.appendChild(ed);
+    
 
 })
 
@@ -136,10 +137,56 @@ GenerateCV = () => {
     portT.appendChild(aport);
 
 
+    // Work Experience
+
+    
+    let workExp = document.getElementsByClassName("weField"); //array
+    let str = "";
+    for(let i of workExp){
+
+        str = str +` <li>${i.value}</li>`
+    }
+   
+    let weTemplate = document.getElementById('weT');
+
+    weTemplate.innerHTML= str;
+
+
+
+     // Education Qualification
+     
+     let EdField = document.getElementsByClassName('EdField');
+     let str1 = "";
+
+     for(let i of EdField){
+
+        str1 = str1 +`<li>${i.value}</li>`
+
+       
+    }
+
+     let eduTemplate = document.getElementById('edT');
+
+      eduTemplate.innerHTML = str1;
+    //   console.log(str1);
+
+
+    document.getElementById("cv-form").style.display="none";
+    document.getElementById("cv-template").style.display="block";
+
 
 
 }
 
 PrintCV = () => {
+
+    window.print();
+
+}
+
+EditBack= ()=>{
+
+    document.getElementById("cv-template").style.display="none";
+    document.getElementById("cv-form").style.display="block";
 
 }
