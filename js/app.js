@@ -28,7 +28,7 @@ RMworkExpBtn.addEventListener("click", () => {
 
     if (del == true) { // remove
 
-        console.log("hey");
+       
     } else {
         console.log(2);
     }
@@ -53,6 +53,34 @@ eduBtn.addEventListener("click", () => {
 
 
 GenerateCV = () => {
+
+
+    // PhotoCV
+
+    let photoField = document.getElementById("photocvfield").files[0];
+
+    let imgTemplate = document.getElementById("imgT");
+
+    // console.log(photoField);
+
+    let imageReader = new FileReader();
+
+
+     imageReader.readAsDataURL(photoField);
+
+
+     imageReader.onload= ()=>{ // fixed to read img time
+
+
+        //  console.log(imageReader.result);
+
+        if(imageReader.result!=""){
+            imgTemplate.src = imageReader.result;
+        }
+        
+     }
+
+
 
     // names
     let nameField = document.getElementById('nameField').value;
@@ -182,6 +210,7 @@ PrintCV = () => {
 
     window.print();
 
+
 }
 
 EditBack= ()=>{
@@ -190,3 +219,5 @@ EditBack= ()=>{
     document.getElementById("cv-form").style.display="block";
 
 }
+
+// !todo : Add image option and more details fields + print friendly , image not selected alert

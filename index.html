@@ -27,6 +27,15 @@
 
         <h3>Personal Information</h3>
 
+
+        <!-- photo -->
+        <div class="form-group py-2 mt-2">
+
+        <label for="photocv">Select your photo</label>   
+        <input type="file" class="form-control" id="photocvfield">
+        
+        </div>
+
         <div class="form-group">
             <label for="nameField">Your Name</label>
             <input type="text" class="form-control" id="nameField" placeholder="Enter here">
@@ -142,7 +151,7 @@
 
      <div class="col-md-4 text-center py-5 background-left">
         <!-- first col -->
-        <img src="./images/defaultAvatar.png" class="img-fluid defaultAvatar" alt="userAvatar" srcset="">
+        <img src="./images/defaultAvatar.png" class="img-fluid defaultAvatar" alt="userAvatar" srcset="" id="imgT">
 
         <div class="container mt-3">
 
@@ -202,7 +211,7 @@
             </div>
         </div>
 
-        <div class="container mt-4 text-center">
+        <div class="container mt-4 text-center printbtn">
             <button class="btn btn-success" onclick="PrintCV()">Print CV </button>
             <button class="btn btn-success" onclick="EditBack()">Edit</button>
         </div>  
