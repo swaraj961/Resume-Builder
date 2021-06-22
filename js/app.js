@@ -2,10 +2,12 @@ let AddworkExpBtn = document.querySelector("#weAdd-btn");
 let RMworkExpBtn = document.querySelector("#weRem-btn");
 let workExpFeild = document.querySelector("#workExp");
 
-let eduBtn = document.querySelector("#eduAddbtn");
-let education = document.querySelector("#education");
+let eduAddBtn = document.querySelector("#eduAddbtn");
+let eduRMBtn = document.querySelector("#eduRem-btn");
 
+let educationField = document.querySelector("#education");
 
+// work exp Add 
 AddworkExpBtn.addEventListener("click", () => {
 
     let workfeid = document.createElement('textarea');
@@ -20,14 +22,14 @@ AddworkExpBtn.addEventListener("click", () => {
 
 })
 
-// fix remove 
-
+// work exp remove 
 RMworkExpBtn.addEventListener("click", () => {
 
     let del = confirm("Do you really want to remove it")
 
     if (del == true) { // remove
 
+        workExpFeild.removeChild(workExpFeild.lastElementChild);
        
     } else {
         console.log(2);
@@ -37,19 +39,38 @@ RMworkExpBtn.addEventListener("click", () => {
 })
 
 
-eduBtn.addEventListener("click", () => {
+//Edu Add
+eduAddBtn.addEventListener("click", () => {
 
     let ed = document.createElement("textarea");
     ed.classList.add("form-control");
-    ed.classList.add("EduField");
+    ed.classList.add("EdField");
     ed.classList.add('mt-3');
     ed.setAttribute("rows", 3);
     ed.setAttribute("placeholder", "Enter here");
 
-    education.appendChild(ed);
+    educationField.appendChild(ed);
     
 
 })
+
+// edu remove 
+
+eduRMBtn.addEventListener("click", () => {
+
+    let del = confirm("Do you really want to remove it")
+
+    if (del == true) { // remove
+
+       educationField .removeChild(educationField.lastElementChild);
+       
+    } else {
+        console.log(2);
+    }
+
+
+})
+
 
 
 GenerateCV = () => {
