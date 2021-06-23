@@ -14,7 +14,7 @@ AddworkExpBtn.addEventListener("click", () => {
     workfeid.classList.add('form-control');
     workfeid.classList.add('weField');
     workfeid.classList.add('mt-3');
-    workfeid.setAttribute("rows", 3);
+    workfeid.setAttribute("rows", 2);
     workfeid.setAttribute("placeholder", "Enter here");
 
 
@@ -46,7 +46,7 @@ eduAddBtn.addEventListener("click", () => {
     ed.classList.add("form-control");
     ed.classList.add("EdField");
     ed.classList.add('mt-3');
-    ed.setAttribute("rows", 3);
+    ed.setAttribute("rows", 2);
     ed.setAttribute("placeholder", "Enter here");
 
     educationField.appendChild(ed);
@@ -81,6 +81,7 @@ GenerateCV = () => {
     let photoField = document.getElementById("photocvfield").files[0];
 
     let imgTemplate = document.getElementById("imgT");
+    let imgTemplate2 = document.getElementById("imageTemp");
 
     // console.log(photoField);
 
@@ -224,7 +225,6 @@ GenerateCV = () => {
     document.getElementById("cv-template").style.display="block";
 
 
-
 }
 
 PrintCV = () => {
@@ -241,4 +241,4 @@ EditBack= ()=>{
 
 }
 
-// !todo : Add image option and more details fields + print friendly , image not selected alert
+// !todo : more details fields + print friendly , image not selected alert, put all html in one page 
