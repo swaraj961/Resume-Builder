@@ -10,15 +10,17 @@ body{
 
 label{
     padding-bottom: 4px;
+    color: white;
 }
   /* social - icons  */
 
 .fa-linkedin {
-    background: #007bb5;
+    /* background: #007bb5; */
     color: white;
-    padding: .4rem;
+    padding-right: 5px ;
     border-radius: 50%;
     margin-bottom: .3rem;
+    
   }
   
   .fa:hover {
@@ -37,7 +39,15 @@ label{
 .fa-github{
 
     margin-bottom: .3rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+}
+
+.github{
+    margin-top: 8px;
+}
+
+.profile{
+    border-radius: 50%;
 }
 
 #cv-template{

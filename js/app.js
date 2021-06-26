@@ -5,7 +5,13 @@ let workExpFeild = document.querySelector("#workExp");
 let eduAddBtn = document.querySelector("#eduAddbtn");
 let eduRMBtn = document.querySelector("#eduRem-btn");
 
+let InterestAddBtn = document.querySelector("#ITAdd-btn");
+let InterestRMBtn = document.querySelector("#ITRem-btn");
+
 let educationField = document.querySelector("#education");
+let InterestField = document.querySelector("#interest");
+
+
 
 // work exp Add 
 AddworkExpBtn.addEventListener("click", () => {
@@ -70,6 +76,43 @@ eduRMBtn.addEventListener("click", () => {
 
 
 })
+
+
+// Interest add 
+
+InterestAddBtn.addEventListener("click", ()=>{
+
+    let Interestf = document.createElement("textarea");
+    Interestf.classList.add("form-control");
+    Interestf.classList.add("interestField");
+    Interestf.classList.add('mt-3');
+    Interestf.setAttribute("rows", 1);
+    Interestf.setAttribute("placeholder", "Enter here");
+
+    InterestField.appendChild(Interestf);
+
+})
+
+
+//  Interest remove
+
+
+InterestRMBtn.addEventListener("click", () => {
+
+    let del = confirm("Do you really want to remove it")
+
+    if (del == true) { // remove
+
+       InterestField.removeChild(InterestField.lastElementChild);
+       
+    } else {
+        console.log(2);
+    }
+
+
+})
+
+
 
 
 
@@ -156,6 +199,7 @@ GenerateCV = () => {
     alinkedin.innerText = "Linkedin"
     linkT.innerHTML = "";
 
+    
     linkT.appendChild(alinkedin);
 
     // github
@@ -201,6 +245,32 @@ GenerateCV = () => {
 
     weTemplate.innerHTML= str;
 
+    // Languages 
+
+    let nativeLanField = document.getElementById('NatLField').value
+    let proLanField = document.getElementById('proLField').value
+
+
+    let proLag = document.getElementById('proL')
+    let nativeLag = document.getElementById('nativeL')
+
+    proLag.innerHTML=proLanField;
+    nativeLag.innerHTML= nativeLanField
+
+    // Interest 
+
+    let interestFvalue = document.getElementsByClassName("interestField")
+    let interest = document.getElementById("TInterest")
+
+    let intStr = ""
+
+    for(let i of interestFvalue){
+
+        intStr+= ` <li>${i.value}</li>`
+    }
+
+    interest.innerHTML=intStr
+
 
 
      // Education Qualification
@@ -219,6 +289,8 @@ GenerateCV = () => {
 
       eduTemplate.innerHTML = str1;
     //   console.log(str1);
+
+
 
 
     document.getElementById("cv-form").style.display="none";

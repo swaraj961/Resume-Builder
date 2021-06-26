@@ -8,16 +8,18 @@
     <title>Resume-Builder</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/BootStrap/bootstrap.min.css"> 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Theme-1.css">    
 </head>
 <body>
 
 
     
    <div class="container" id="cv-form">
-    <h1 class="text-center my-2">Resume-Builder</h1>
-    <p class="text-center">Create your own resume instantly ✨ </p>
+    <h1 class="text-center my-2" style="color: white;">Resume-Builder</h1>
+    <p class="text-center" style="color: white;">Create your own resume instantly ✨ </p>
 
     <!-- Grid 12 -->
     <div class="row">
@@ -25,14 +27,14 @@
         <div class="col-md-6">
         <!-- 6 grid  column1 -->
 
-        <h3>Personal Information</h3>
+        <h3 style="color: white;">Personal Information</h3>
 
 
         <!-- photo -->
-        <div class="form-group py-2 mt-2">
+        <div class="form-group py-2 ">
 
         <label for="photocv">Select your photo</label>   
-        <input type="file" class="form-control" id="photocvfield">
+        <input type="file" class="form-control" id="photocvfield" style="padding-bottom: 2.5rem; padding-top: 10px">
         
         </div>
 
@@ -58,14 +60,14 @@
         </div>
 
 
-        <h6 class="my-3">Social Links</h6>
+        <h6 class="my-3" style="color: white;">Social Links</h6>
 
         <!-- github -->
        
         <div class="form-group">
 
             <label for="gitField">Github</label>
-            <i class="fa fa-github" aria-hidden="true"></i>
+            <i class="fa fa-github" aria-hidden="true" style="color: white"></i>
             <input type="text" class="form-control" id="gitField" placeholder="Enter here">
 
         </div>
@@ -73,7 +75,7 @@
         <!-- linkedin -->
         <div class="form-group my-2">     
                 <label for="linkedinField">Linkedin </label>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true" style="background: #007bb5 ;padding: 5px;"></i>
             <input type="text" class="form-control" id="linkedinField" placeholder="Enter here">
 
         </div>
@@ -99,7 +101,7 @@
 
         <div class="col-md-6">
             
-            <h3>Professional Information</h3>
+            <h3 style="color : white">Professional Information</h3>
     
             <!-- job tittle -->
             <div class="form-group ">
@@ -129,7 +131,51 @@
             <button class="btn-primary mt-2 btn-sm" id="eduAddbtn"> Add more </button>
             <button class="btn-danger mt-2 btn-sm" id="eduRem-btn"> Remove </button>
 
+            
 
+
+            <!-- Languages -->
+
+            <h6 class="my-2 py-2" style="color: white;">Languages</h6>
+
+        <!-- L1 -->
+       
+        <div class="form-group">
+
+            <label for="NatLField">Native</label>
+            <i class="fa fa-language" aria-hidden="true" style="color: white"></i>
+            <input type="text" class="form-control" id="NatLField"" placeholder="Enter here">
+
+        </div>
+
+        <!-- professional -->
+        <div class="form-group">
+
+            <label for="proLField">Professional</label>
+            <i class="fa fa-language" aria-hidden="true" style="color: white"></i>
+            <input type="text" class="form-control" id="proLField" placeholder="Enter here">
+
+        </div>
+
+        <!-- Other interest -->
+
+        <h6 class="my-2 py-2" style="color: white;">Interests</h6>
+
+        <!-- 1-->
+
+         
+        <div class="form-group mt-2" id="interest">
+            <label for="interestField">Interests</label>
+            <textarea class="form-control interestField" placeholder="Enter here" rows="1" ></textarea>
+
+        </div>
+        
+        <button class="btn-primary mt-2 btn-sm" id="ITAdd-btn"> Add more </button>
+        <button class="btn-danger mt-2 btn-sm" id="ITRem-btn"> Remove </button>
+       
+
+
+        
             
             
         </div>
@@ -146,92 +192,196 @@
    </div>
 
 
-   
-  
-   <!-- CV Template -->
-   <div class="container" id="cv-template">
+   <!-- new temp cv -->
 
-    <!-- grid 12 =>  4:8 -->
-    <div class="row">
 
-     <div class="col-md-4 text-center py-5 background-left">
-        <!-- first col -->
-        <img src="./images/defaultAvatar.png" class="img-fluid defaultAvatar" alt="userAvatar" srcset="" id="imgT">
-
-        <div class="container mt-3">
-
-            <h4 id="nameT">Your Name</h4>
-            <p id="mobileT">+91 12456799</p>
-            <p id="emailT" style="font-size: small;">yourname@ymail.com</p>
-            <p id="addressT">House no E-84/3 3rd Floor Rk Puram</p>
-
-            <hr>
-
-            <p id="linkIdT"><a href="#">Linkedin</a></p>
-            <p id="gitIdT"><a href="#">Github</a></p>
-            <p id="portIdT"><a href="#">Portfolio</a></p>
-        </div>
-
-    </div> 
-    
-    <div class="col-md-8">
-        <!-- second col -->
-
-        <!-- job title -->
-        <h1 id="JobNameT" class="text-center py-4" style="font-weight: 800;">Job tittle </h1>
-
-        <!-- Work exp card -->
-
-        <div class="card mt-3">
-
-            <div class="card-header background-left">
-            <h3>Work Experience</h3>
-            </div>
-            <div class="card-body "style="color: black">
-               <ul id="weT">
-
-                <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
-                <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
-                
-               </ul>
-            </div>
-        </div>
+   <div class="wrapper" id="cv-template">
+    <div class="sidebar-wrapper">
+        <div class="profile-container">
+            <img class="profile" src="/images/defaultAvatar.png" alt="" id="imgT">
+            <h1 class="name" id="nameT">Alan Doe</h1>
+            <h3 class="tagline" id="JobNameT">Full Stak Developer</h3>
+        </div><!--//profile-container-->
         
-        <!-- Education card -->
+        <div class="contact-container container-block">
+            <ul class="list-unstyled contact-list">
+                <li class="email"><i class="fa fa-envelope" style="margin-right: 5px;"></i><a  id="emailT" href="mailto: Anyemail@email.com">swaraj@website.com</a></li>
+                <li class="phone"><i class="fa fa-phone" style="margin-right: 5px;"></i><a  id="mobileT" href="tel:0123 456 789">0123 456 789</a></li>
+                <li class="website"></li><i class="fa fa-globe" style="margin-right: 5px;"></i><a  id="portIdT"href="#" target="_blank">portfoliosite.com</a></li>
+                <li class="linkedin"></li><i class="fa fa-linkedin" style="margin-right: 2px;"></i><a  id="linkIdT"href="#" target="_blank">linkedin.com/in</a></li>
+                <li class="github" ><i class="fa fa-github"style="margin-right: 5px;"></i><a id="gitIdT" href="#" target="_blank">github.com/username</a></li>
+                <li class="home" ><i class="fa fa-home" style="margin-right: 5px;"></i><span id="addressT" href="#" target="_blank">@Address</span></li>
+            </ul>
+        </div><!--//contact-container-->
+        <div class="education-container container-block">
+            <h2 class="container-block-title">Education</h2>
+            <div class="item" id="edT">
+                <h4 class="degree">MSc in Computer Science</h4>
+                <h5 class="meta">University of London</h5>
+                <div class="time">2016 - 2018</div>
+            </div><!--//item-->
+        
+        </div><!--//education-container-->
+        
+        <div class="languages-container container-block">
+            <h2 class="container-block-title">Languages</h2>
+            <ul class="list-unstyled interests-list">
+                <li >(Native) <span  id="nativeL"class="lang-desc"></span></li>
+                <li >(Professional) <span  id="proL"class="lang-desc"></span></li>
+            
+            </ul>
+        </div><!--//interests-->
+        
+        <div class="interests-container container-block">
+            <h2 class="container-block-title">Interests</h2>
+            <ul class="list-unstyled interests-list " id="TInterest">
+                <li>Climbing</li>
+                <li>Snowboarding</li>
+                <li>Cooking</li>
+            </ul>
+        </div><!--//interests-->
+        
+    </div><!--//sidebar-wrapper-->
+    
+    <div class="main-wrapper">
+        
+        
+        <section class="section experiences-section">
+            <h2 class="section-title"><span class="icon-holder"><i class="fa fa-briefcase"></i></span>Experiences</h2>
+            
+            <div class="item">
+                <div class="meta">
+                    <div class="upper-row">
+                        <h3 class="job-title" id="weT">Lead Developer</h3>
+                        <div class="time">2019 - Present</div>
+                    </div><!--//upper-row--
+                </div><!--//meta-->
+        
+            </div><!--//item-->
+    
+            
+        </section><!--//section-->
+        
+        <section class="section projects-section">
+            <h2 class="section-title"><span class="icon-holder"><i class="fa fa-archive"></i></span>Projects</h2>
 
-        <div class="card mt-4">
-
-            <div class="card-header background-left">
-            <h3>Education Qualification</h3>
-            </div>
-            <div class="card-body "style="color: black">
-
-                <ul id="edT">
-
-                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
-                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
-                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
-                    <li> Lorem,nulla tempore, eaque itaque earum aperiam soluta!</li>
-                </ul>
-            </div>
-        </div>
-
+            <div class="item">
+                <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">CoderPro</a></span> - <span class="project-tagline">A responsive website template designed to help developers launch their software projects. </span>
+                
+            </div><!--//item-->
+            <div class="item">
+                <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-4-template-for-saas-businesses/" target="_blank">Launch</a></span> - <span class="project-tagline">A responsive website template designed to help startups promote their products or services.</span>
+            </div><!--//item-->
+            <div class="item">
+                <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank">DevCard</a></span> - <span class="project-tagline">A portfolio website template designed for software developers.</span>
+            </div><!--//item-->
+            <div class="item">
+                <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/bootstrap-template-for-mobile-apps-nova-pro/" target="_blank">Nova Pro</a></span> - <span class="project-tagline">A responsive Bootstrap theme designed to help app developers promote their mobile apps</span>
+            </div><!--//item-->
+            <div class="item">
+                <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">DevStudio</a></span> - 
+                <span class="project-tagline">A responsive website template designed to help web developers/designers market their services. </span>
+            </div><!--//item-->
+        </section><!--//section-->
+        
+        <section class="skills-section section">
+            <h2 class="section-title"><span class="icon-holder"><i class="fa fa-rocket"></i></span>Skills &amp; Proficiency</h2>
+            <div class="skillset">        
+                <div class="item">
+                    <h3 class="level-title">Python &amp; Django</h3>
+                    <div class="progress level-bar">
+                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                               
+                </div><!--//item-->
+                
+                <div class="item">
+                    <h3 class="level-title">Javascript &amp; jQuery</h3>
+                    <div class="progress level-bar">
+                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                              
+                </div><!--//item-->
+                
+                <div class="item">
+                    <h3 class="level-title">Angular</h3>
+                    <div class="progress level-bar">
+                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                                 
+                </div><!--//item-->
+                
+                <div class="item">
+                    <h3 class="level-title">HTML5 &amp; CSS</h3>
+                    <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>                                
+                    </div><!--//item-->
+                    
+                    <div class="item">
+                        <h3 class="level-title">Ruby on Rails</h3>
+                        <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>                                  
+                    </div><!--//item-->
+                
+                    <div class="item">
+                        <h3 class="level-title">Sketch &amp; Photoshop</h3>
+                        <div class="progress level-bar">
+                        <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>                                 
+                </div><!--//item-->
+                
+            </div>  
+        </section><!--//skills-section-->
+        
         <div class="container mt-4 text-center printbtn">
             <button class="btn btn-success" onclick="PrintCV()">Print CV </button>
             <button class="btn btn-success" onclick="EditBack()">Edit</button>
         </div>  
-    </div>
-
+        
+    </div><!--//main-body-->
     
+</div>
 
 
-    </div>
+<footer class="footer">
+    <div class="text-center">
+        
+        
+    </div><!--//container-->
+</footer><!--//footer-->
 
 
-   </div>
+
+
 
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="./js/app.js"></script>
+<!-- <script>
+    GenerateCV = ()=>{
+
+        
+     document.getElementById("cv-form").style.display="none";
+     document.getElementById("cv-template").style.display="block";
+
+    }
+
+    
+PrintCV = () => {
+
+window.print();
+
+
+}
+
+EditBack= ()=>{
+
+document.getElementById("cv-template").style.display="none";
+document.getElementById("cv-form").style.display="block";
+
+}
+</script> -->
 </html>
+
+
+<!-- todo fix cv data fonts ul  social icon class -->
