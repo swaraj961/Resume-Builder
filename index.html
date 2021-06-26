@@ -55,12 +55,12 @@
         </div>
         <div class="form-group mt-2">
             <label for="addressField">Your Address</label>
-            <textarea class="form-control" id="addressField" placeholder="Enter here"  ></textarea>
+            <textarea class="form-control mb-5" id="addressField" placeholder="Enter here"  ></textarea>
 
         </div>
 
 
-        <h6 class="my-3" style="color: white;">Social Links</h6>
+        <h4 class="my-3" style="color: white;">Social Links</h4>
 
         <!-- github -->
        
@@ -114,9 +114,12 @@
             
             <div class="form-group mt-2" id="workExp">
                 <label for="weField">Work Experience</label>
-                <textarea class="form-control weField" placeholder="Enter here" rows="2" ></textarea>
+                <textarea class="form-control weField" placeholder="Role at company" rows="2" ></textarea>
+                <input class="form-control weFieldTIME mt-2"
+                maxlength="20 type="text"  placeholder="TimePeriod"  >
     
-            </div>
+    
+            </div>  
             
             <button class="btn-primary mt-2 btn-sm" id="weAdd-btn"> Add more </button>
             <button class="btn-danger mt-2 btn-sm" id="weRem-btn"> Remove </button>
@@ -128,7 +131,7 @@
                 <textarea class="form-control EdField" placeholder="Enter here"  rows="2" ></textarea>
     
             </div>
-            <button class="btn-primary mt-2 btn-sm" id="eduAddbtn"> Add more </button>
+            <button class="btn-primary mt-2 btn-sm mb-3" id="eduAddbtn"> Add more </button>
             <button class="btn-danger mt-2 btn-sm" id="eduRem-btn"> Remove </button>
 
             
@@ -136,7 +139,7 @@
 
             <!-- Languages -->
 
-            <h6 class="my-2 py-2" style="color: white;">Languages</h6>
+            <h4 class="my-2 py-2" style="color: white;">Languages</h4>
 
         <!-- L1 -->
        
@@ -159,13 +162,13 @@
 
         <!-- Other interest -->
 
-        <h6 class="my-2 py-2" style="color: white;">Interests</h6>
+        <h4 class="my-2 py-2" style="color: white;">Interests</h4>
 
         <!-- 1-->
 
          
         <div class="form-group mt-2" id="interest">
-            <label for="interestField">Interests</label>
+            <label for="interestField">Add your interests</label>
             <textarea class="form-control interestField" placeholder="Enter here" rows="1" ></textarea>
 
         </div>
@@ -199,7 +202,7 @@
     <div class="sidebar-wrapper">
         <div class="profile-container">
             <img class="profile" src="/images/defaultAvatar.png" alt="" id="imgT">
-            <h1 class="name" id="nameT">Alan Doe</h1>
+            <h1 class="name" id="nameT">Swaraj</h1>
             <h3 class="tagline" id="JobNameT">Full Stak Developer</h3>
         </div><!--//profile-container-->
         
@@ -216,9 +219,9 @@
         <div class="education-container container-block">
             <h2 class="container-block-title">Education</h2>
             <div class="item" id="edT">
-                <h4 class="degree">MSc in Computer Science</h4>
-                <h5 class="meta">University of London</h5>
-                <div class="time">2016 - 2018</div>
+                <h4 class="degree">Btech IT IT</h4>
+                <h5 class="meta">USICT</h5>
+                <div class="time">2018 - 2022</div>
             </div><!--//item-->
         
         </div><!--//education-container-->
@@ -253,11 +256,12 @@
                 <div class="meta">
                     <div class="upper-row">
                         <h3 class="job-title" id="weT">Lead Developer</h3>
-                        <div class="time">2019 - Present</div>
-                    </div><!--//upper-row--
-                </div><!--//meta-->
+                        <div class="time" id="TworkPeriod">2019 - Present</div>
+                    </div>
+                </div>
         
-            </div><!--//item-->
+            </div>
+
     
             
         </section><!--//section-->

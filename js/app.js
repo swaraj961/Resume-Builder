@@ -1,6 +1,7 @@
 let AddworkExpBtn = document.querySelector("#weAdd-btn");
 let RMworkExpBtn = document.querySelector("#weRem-btn");
 let workExpFeild = document.querySelector("#workExp");
+let workExpTime = document.getElementsByClassName("weFieldTIME")
 
 let eduAddBtn = document.querySelector("#eduAddbtn");
 let eduRMBtn = document.querySelector("#eduRem-btn");
@@ -12,19 +13,29 @@ let educationField = document.querySelector("#education");
 let InterestField = document.querySelector("#interest");
 
 
-
+let workfeid ;
+let timeworkxp;
 // work exp Add 
 AddworkExpBtn.addEventListener("click", () => {
 
-    let workfeid = document.createElement('textarea');
+    workfeid = document.createElement('textarea');
     workfeid.classList.add('form-control');
     workfeid.classList.add('weField');
     workfeid.classList.add('mt-3');
     workfeid.setAttribute("rows", 2);
-    workfeid.setAttribute("placeholder", "Enter here");
+    workfeid.setAttribute("placeholder", "Role at company");
+
+    timeworkxp = document.createElement('input');
+    timeworkxp.classList.add('form-control')
+    timeworkxp.classList.add('weFieldTIME')
+    timeworkxp.classList.add('mt-2')
+    timeworkxp.setAttribute("placeholder","TimePeriod")
+    timeworkxp.setAttribute("maxlength","20")
+  
 
 
     workExpFeild.appendChild(workfeid);
+    workExpFeild.appendChild(timeworkxp);
 
 })
 
@@ -35,6 +46,7 @@ RMworkExpBtn.addEventListener("click", () => {
 
     if (del == true) { // remove
 
+        workExpFeild.removeChild(workExpFeild.lastElementChild);
         workExpFeild.removeChild(workExpFeild.lastElementChild);
        
     } else {
@@ -118,13 +130,15 @@ InterestRMBtn.addEventListener("click", () => {
 
 GenerateCV = () => {
 
+    // workExpTime=232
+    console.log(workExpTime);
 
     // PhotoCV
 
     let photoField = document.getElementById("photocvfield").files[0];
 
     let imgTemplate = document.getElementById("imgT");
-    let imgTemplate2 = document.getElementById("imageTemp");
+ 
 
     // console.log(photoField);
 
@@ -238,12 +252,41 @@ GenerateCV = () => {
     let str = "";
     for(let i of workExp){
 
-        str = str +` <li>${i.value}</li>`
+        str = str +` <li style="
+        margin-bottom: 10px;
+    ">${i.value}</li>`
     }
    
     let weTemplate = document.getElementById('weT');
 
     weTemplate.innerHTML= str;
+
+    let workexperiod = document.getElementById("TworkPeriod");
+
+    let expString ="";
+
+    for(let j of workExpTime){
+
+    
+        expString = expString +` <li style="margin-bottom: 10px; list-style-type: none;">${j.value}</li>`
+
+    }
+
+    workexperiod.innerHTML=expString;
+
+
+//     let item = document.createElement('div');
+//     item.classList.add("item");
+//     item.innerHTML=`
+//     <div class="meta">
+//         <div class="upper-row">
+//             <h3 class="job-title">${workfeid}</h3>
+//             <div class="time">${timeworkxp}</div>
+//         </div><!--//upper-row-->
+// <!--//item-->`
+
+// workExpFeild.appendChild(item);
+
 
     // Languages 
 
