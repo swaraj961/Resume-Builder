@@ -90,6 +90,29 @@
             <input type="text" class="form-control" id="portfolioField" placeholder="Enter here">
 
         </div>
+
+     <!-- Languages -->
+
+     <h4 class="my-3 py-2" style="color: white;">Languages</h4>
+
+     <!-- L1 -->
+    
+     <div class="form-group">
+
+         <label for="NatLField">Native</label>
+         <i class="fa fa-language" aria-hidden="true" style="color: white"></i>
+         <input type="text" class="form-control" id="NatLField"" placeholder="Enter here">
+
+     </div>
+
+     <!-- professional -->
+     <div class="form-group">
+
+         <label for="proLField">Professional</label>
+         <i class="fa fa-language" aria-hidden="true" style="color: white"></i>
+         <input type="text" class="form-control" style="padding-top: 10px;" id="proLField" placeholder="Enter here">
+
+     </div>    
         
     
 
@@ -113,7 +136,7 @@
             <!-- work exp -->
             
             <div class="form-group mt-2" id="workExp">
-                <label for="weField">Work Experience</label>
+                <label for="weField"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp; Work Experience</label>
                 <textarea class="form-control weField" placeholder="Role at company" rows="2" ></textarea>
                 <input class="form-control weFieldTIME mt-2"
                 maxlength="20 type="text"  placeholder="TimePeriod"  >
@@ -126,8 +149,8 @@
 
 
              <!-- Education -->
-            <div class="form-group mt-2" id="education">
-                <label for="EdField">Education</label>
+            <div class="form-group mt-3" id="education">
+                <label for="EdField"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Education</label>
                 <textarea class="form-control EdField" placeholder="Enter here"  rows="2" ></textarea>
     
             </div>
@@ -135,30 +158,22 @@
             <button class="btn-danger mt-2 btn-sm" id="eduRem-btn"> Remove </button>
 
             
+            <!-- Projects -->
+            
+            <div class="form-group mt-2" id="projectUser">
+                <label for=" projectFieldTittle"><i class="fa fa-archive" aria-hidden="true"></i>&nbsp; Projects</label>
+                <input class="form-control projectFieldTittle"
+                 type="text" placeholder="Project tittle"  >
+                <textarea class="form-control projectFieldDesc  mt-2" placeholder="short description" rows="2" ></textarea>
+    
+    
+            </div>  
+            
+            <button class="btn-primary mt-2 btn-sm" id="PAdd-btn"> Add more </button>
+            <button class="btn-danger mt-2 btn-sm" id="PRRem-btn"> Remove </button>
 
+            
 
-            <!-- Languages -->
-
-            <h4 class="my-2 py-2" style="color: white;">Languages</h4>
-
-        <!-- L1 -->
-       
-        <div class="form-group">
-
-            <label for="NatLField">Native</label>
-            <i class="fa fa-language" aria-hidden="true" style="color: white"></i>
-            <input type="text" class="form-control" id="NatLField"" placeholder="Enter here">
-
-        </div>
-
-        <!-- professional -->
-        <div class="form-group">
-
-            <label for="proLField">Professional</label>
-            <i class="fa fa-language" aria-hidden="true" style="color: white"></i>
-            <input type="text" class="form-control" id="proLField" placeholder="Enter here">
-
-        </div>
 
         <!-- Other interest -->
 
@@ -175,11 +190,9 @@
         
         <button class="btn-primary mt-2 btn-sm" id="ITAdd-btn"> Add more </button>
         <button class="btn-danger mt-2 btn-sm" id="ITRem-btn"> Remove </button>
-       
-
 
         
-            
+              
             
         </div>
         
@@ -195,7 +208,7 @@
    </div>
 
 
-   <!-- new temp cv -->
+   <!-- Cv create Temp  -->
 
 
    <div class="wrapper" id="cv-template">
@@ -204,7 +217,7 @@
             <img class="profile" src="/images/defaultAvatar.png" alt="" id="imgT">
             <h1 class="name" id="nameT">Swaraj</h1>
             <h3 class="tagline" id="JobNameT">Full Stak Developer</h3>
-        </div><!--//profile-container-->
+        </div>
         
         <div class="contact-container container-block">
             <ul class="list-unstyled contact-list">
@@ -215,16 +228,16 @@
                 <li class="github" ><i class="fa fa-github"style="margin-right: 5px;"></i><a id="gitIdT" href="#" target="_blank">github.com/username</a></li>
                 <li class="home" ><i class="fa fa-home" style="margin-right: 5px;"></i><span id="addressT" href="#" target="_blank">@Address</span></li>
             </ul>
-        </div><!--//contact-container-->
+        </div>
         <div class="education-container container-block">
             <h2 class="container-block-title">Education</h2>
             <div class="item" id="edT">
                 <h4 class="degree">Btech IT IT</h4>
                 <h5 class="meta">USICT</h5>
                 <div class="time">2018 - 2022</div>
-            </div><!--//item-->
+            </div>
         
-        </div><!--//education-container-->
+        </div>
         
         <div class="languages-container container-block">
             <h2 class="container-block-title">Languages</h2>
@@ -233,7 +246,7 @@
                 <li >(Professional) <span  id="proL"class="lang-desc"></span></li>
             
             </ul>
-        </div><!--//interests-->
+        </div>
         
         <div class="interests-container container-block">
             <h2 class="container-block-title">Interests</h2>
@@ -242,9 +255,9 @@
                 <li>Snowboarding</li>
                 <li>Cooking</li>
             </ul>
-        </div><!--//interests-->
+        </div>
         
-    </div><!--//sidebar-wrapper-->
+    </div>
     
     <div class="main-wrapper">
         
@@ -264,7 +277,7 @@
 
     
             
-        </section><!--//section-->
+        </section>
         
         <section class="section projects-section">
             <h2 class="section-title"><span class="icon-holder"><i class="fa fa-archive"></i></span>Projects</h2>
@@ -272,21 +285,21 @@
             <div class="item">
                 <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">CoderPro</a></span> - <span class="project-tagline">A responsive website template designed to help developers launch their software projects. </span>
                 
-            </div><!--//item-->
+            </div>
             <div class="item">
                 <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-4-template-for-saas-businesses/" target="_blank">Launch</a></span> - <span class="project-tagline">A responsive website template designed to help startups promote their products or services.</span>
-            </div><!--//item-->
+            </div>
             <div class="item">
                 <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank">DevCard</a></span> - <span class="project-tagline">A portfolio website template designed for software developers.</span>
-            </div><!--//item-->
+            </div>
             <div class="item">
                 <span class="project-title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/bootstrap-template-for-mobile-apps-nova-pro/" target="_blank">Nova Pro</a></span> - <span class="project-tagline">A responsive Bootstrap theme designed to help app developers promote their mobile apps</span>
-            </div><!--//item-->
+            </div>
             <div class="item">
                 <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">DevStudio</a></span> - 
                 <span class="project-tagline">A responsive website template designed to help web developers/designers market their services. </span>
-            </div><!--//item-->
-        </section><!--//section-->
+            </div>
+        </section>
         
         <section class="skills-section section">
             <h2 class="section-title"><span class="icon-holder"><i class="fa fa-rocket"></i></span>Skills &amp; Proficiency</h2>
@@ -296,52 +309,52 @@
                     <div class="progress level-bar">
                         <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>                               
-                </div><!--//item-->
+                </div>
                 
                 <div class="item">
                     <h3 class="level-title">Javascript &amp; jQuery</h3>
                     <div class="progress level-bar">
                         <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>                              
-                </div><!--//item-->
+                </div>
                 
                 <div class="item">
                     <h3 class="level-title">Angular</h3>
                     <div class="progress level-bar">
                         <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>                                 
-                </div><!--//item-->
+                </div>
                 
                 <div class="item">
                     <h3 class="level-title">HTML5 &amp; CSS</h3>
                     <div class="progress level-bar">
                             <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>                                
-                    </div><!--//item-->
+                    </div>
                     
                     <div class="item">
                         <h3 class="level-title">Ruby on Rails</h3>
                         <div class="progress level-bar">
                             <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>                                  
-                    </div><!--//item-->
+                    </div>
                 
                     <div class="item">
                         <h3 class="level-title">Sketch &amp; Photoshop</h3>
                         <div class="progress level-bar">
                         <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>                                 
-                </div><!--//item-->
+                </div>
                 
             </div>  
-        </section><!--//skills-section-->
+        </section>
         
         <div class="container mt-4 text-center printbtn">
             <button class="btn btn-success" onclick="PrintCV()">Print CV </button>
             <button class="btn btn-success" onclick="EditBack()">Edit</button>
         </div>  
         
-    </div><!--//main-body-->
+    </div>
     
 </div>
 
@@ -361,30 +374,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="./js/app.js"></script>
-<!-- <script>
-    GenerateCV = ()=>{
 
-        
-     document.getElementById("cv-form").style.display="none";
-     document.getElementById("cv-template").style.display="block";
-
-    }
-
-    
-PrintCV = () => {
-
-window.print();
-
-
-}
-
-EditBack= ()=>{
-
-document.getElementById("cv-template").style.display="none";
-document.getElementById("cv-form").style.display="block";
-
-}
-</script> -->
 </html>
 
 

@@ -1,16 +1,24 @@
 let AddworkExpBtn = document.querySelector("#weAdd-btn");
 let RMworkExpBtn = document.querySelector("#weRem-btn");
+
 let workExpFeild = document.querySelector("#workExp");
 let workExpTime = document.getElementsByClassName("weFieldTIME")
 
 let eduAddBtn = document.querySelector("#eduAddbtn");
 let eduRMBtn = document.querySelector("#eduRem-btn");
 
+let ProjAddBtn = document.querySelector("#PAdd-btn");
+let ProjRMBtn = document.querySelector("#PRRem-btn");
+let ProjectField = document.querySelector("#projectUser")
+
 let InterestAddBtn = document.querySelector("#ITAdd-btn");
 let InterestRMBtn = document.querySelector("#ITRem-btn");
 
 let educationField = document.querySelector("#education");
 let InterestField = document.querySelector("#interest");
+
+
+
 
 
 let workfeid ;
@@ -124,6 +132,47 @@ InterestRMBtn.addEventListener("click", () => {
 
 })
 
+
+// Project add btn 
+
+ProjAddBtn.addEventListener("click",()=>{
+
+    let projectittle = document.createElement('input');
+    projectittle.classList.add("form-control");
+    projectittle.classList.add("projectFieldTittle");
+    projectittle.classList.add("mt-3");
+    projectittle.setAttribute("type","text")
+    projectittle.setAttribute("placeholder","Project tittle")
+
+    let projDesc = document.createElement('textarea');
+    projDesc.classList.add('form-control');
+    projDesc.classList.add('projectFieldDesc');
+    projDesc.classList.add('mt-2');
+    projDesc.setAttribute("placeholder", "short description");
+    projDesc.setAttribute("rows", 2);
+
+
+    
+    ProjectField.appendChild(projectittle);
+    ProjectField.appendChild(projDesc);
+
+})
+
+// Project remove btn 
+ProjRMBtn.addEventListener('click',()=>{
+
+    let del = confirm("Do you really want to remove it")
+
+    if (del == true) { // remove
+
+        ProjectField.removeChild(ProjectField.lastElementChild);
+        ProjectField.removeChild(ProjectField.lastElementChild);
+       
+    } else {
+        console.log(2);
+    }
+
+})
 
 
 
@@ -273,20 +322,6 @@ GenerateCV = () => {
     }
 
     workexperiod.innerHTML=expString;
-
-
-//     let item = document.createElement('div');
-//     item.classList.add("item");
-//     item.innerHTML=`
-//     <div class="meta">
-//         <div class="upper-row">
-//             <h3 class="job-title">${workfeid}</h3>
-//             <div class="time">${timeworkxp}</div>
-//         </div><!--//upper-row-->
-// <!--//item-->`
-
-// workExpFeild.appendChild(item);
-
 
     // Languages 
 
