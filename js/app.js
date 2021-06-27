@@ -11,14 +11,15 @@ let ProjAddBtn = document.querySelector("#PAdd-btn");
 let ProjRMBtn = document.querySelector("#PRRem-btn");
 let ProjectField = document.querySelector("#projectUser")
 
+let skillAddBtn = document.querySelector("#skAdd-btn");
+let skillRMBtn = document.querySelector("#skRem-btn");
+let skillField = document.querySelector("#skilltUser");
+
 let InterestAddBtn = document.querySelector("#ITAdd-btn");
 let InterestRMBtn = document.querySelector("#ITRem-btn");
 
 let educationField = document.querySelector("#education");
 let InterestField = document.querySelector("#interest");
-
-
-
 
 
 let workfeid ;
@@ -40,7 +41,6 @@ AddworkExpBtn.addEventListener("click", () => {
     timeworkxp.setAttribute("placeholder","TimePeriod")
     timeworkxp.setAttribute("maxlength","20")
   
-
 
     workExpFeild.appendChild(workfeid);
     workExpFeild.appendChild(timeworkxp);
@@ -144,17 +144,9 @@ ProjAddBtn.addEventListener("click",()=>{
     projectittle.setAttribute("type","text")
     projectittle.setAttribute("placeholder","Project tittle")
 
-    let projDesc = document.createElement('textarea');
-    projDesc.classList.add('form-control');
-    projDesc.classList.add('projectFieldDesc');
-    projDesc.classList.add('mt-2');
-    projDesc.setAttribute("placeholder", "short description");
-    projDesc.setAttribute("rows", 2);
-
-
     
     ProjectField.appendChild(projectittle);
-    ProjectField.appendChild(projDesc);
+
 
 })
 
@@ -166,7 +158,38 @@ ProjRMBtn.addEventListener('click',()=>{
     if (del == true) { // remove
 
         ProjectField.removeChild(ProjectField.lastElementChild);
-        ProjectField.removeChild(ProjectField.lastElementChild);
+       
+       
+    } else {
+        console.log(2);
+    }
+
+})
+
+// skills add btn
+
+skillAddBtn.addEventListener("click", ()=>{
+
+
+    let skilltittle = document.createElement('input');
+    skilltittle.classList.add("form-control");
+    skilltittle.classList.add("skillFieldTittle");
+    skilltittle.classList.add("mt-3");
+    skilltittle.setAttribute("type","text")
+    skilltittle.setAttribute("placeholder","skill title")
+
+    skillField.appendChild(skilltittle);
+})
+
+// skill rem btn
+
+skillRMBtn.addEventListener("click", ()=>{
+
+    let del = confirm("Do you really want to remove it")
+
+    if (del == true) { // remove
+
+    skillField.removeChild( skillField.lastElementChild);
        
     } else {
         console.log(2);
@@ -178,9 +201,6 @@ ProjRMBtn.addEventListener('click',()=>{
 
 
 GenerateCV = () => {
-
-    // workExpTime=232
-    console.log(workExpTime);
 
     // PhotoCV
 
@@ -323,6 +343,48 @@ GenerateCV = () => {
 
     workexperiod.innerHTML=expString;
 
+
+    // Projects 
+
+    let projtittle = document.getElementsByClassName("projectFieldTittle");
+    let projdesc = document.getElementsByClassName("projectFieldDesc");
+
+
+    let tittleStr = "";
+    let descStr = "";
+
+
+    for(let i of projtittle){
+
+     tittleStr= tittleStr+ `<li class="project-title" id="TprojTitle" style="display: block margin-bottom: 10px;">${i.value}</li> `;
+   
+    }
+    
+    
+    let TprojTitle = document.getElementById("projSec")
+    TprojTitle.innerHTML=tittleStr
+    
+    // for(let j of projdesc){
+    //     descStr+= `<span id="TprojDesc" class="project-tagline">${j.value}</span>`
+    // }
+    // let Tprojdesc = document.getElementById("TprojDesc")
+    // Tprojdesc.innerHTML=descStr;
+    
+
+    // skills
+
+    let skilltittle = document.getElementsByClassName("skillFieldTittle");
+    let skilltemp = document.getElementById('skillId');
+
+    let skillStr = ""
+    
+    for(let i of skilltittle){
+
+        skillStr= skillStr+`<li class="level-title"style="display: block margin-bottom: 10px;">${i.value}</li> `
+    }
+
+    skilltemp.innerHTML=skillStr;
+
     // Languages 
 
     let nativeLanField = document.getElementById('NatLField').value
@@ -391,4 +453,4 @@ EditBack= ()=>{
 
 }
 
-// !todo : more details fields + print friendly , image not selected alert, put all html in one page 
+// !todo :image not selected alert
