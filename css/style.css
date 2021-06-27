@@ -92,6 +92,13 @@ a:hover{
         display: none;
     }
 
+    .badge-pill {
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        }
+    
+
     
     
 

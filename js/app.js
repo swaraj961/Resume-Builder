@@ -380,7 +380,7 @@ GenerateCV = () => {
     
     for(let i of skilltittle){
 
-        skillStr= skillStr+`<li class="level-title"style="display: block margin-bottom: 10px;">${i.value}</li> `
+        skillStr= skillStr+`<li class="level-title badge badge-pill badge-primary"style="display: block margin-bottom: 10px;">${i.value}</li> `
     }
 
     skilltemp.innerHTML=skillStr;
