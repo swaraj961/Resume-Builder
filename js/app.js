@@ -220,7 +220,7 @@ GenerateCV = () => {
      imageReader.onload= ()=>{ // fixed to read img time
 
 
-        //  console.log(imageReader.result);
+         console.log(imageReader.result);
 
         if(imageReader.result!=""){
             imgTemplate.src = imageReader.result;
