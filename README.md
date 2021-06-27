@@ -12,7 +12,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/swaraj961/Resume-Builder)
 
 
-## Demo -  :
+## Demo -  : <a href="https://swaraj961.github.io/Resume-Builder/">live website</a>
  
  <img src="https://github.com/swaraj961/Resume-Builder/blob/master/demo.gif"/>
 
