@@ -1,7 +1,7 @@
 
 # <div align="center"><img src="https://github.com/swaraj961/Resume-Builder/blob/master/images/online_cv.svg" alt="icon" width=40> Resume-Builder </div>
 
-- As the name suggests it's an <b>Resume builder app </b> that take input from user about his professional and personal and build resume quickly.
+- As the name suggests it's an <b>Resume builder app </b> that take input from user about his professional and personal details ,skills, photo etc and build resume quickly.
 - It comes alog with <b>5 different Themes </b> for UI of resume
 - User can re edit the fields and print and save the resume at pdf
 - Serves the purpose of creating a resume at ease 
